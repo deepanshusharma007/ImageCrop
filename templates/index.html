@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Image Cropper</title>
+</head>
+<body>
+    <h1>Image Cropper</h1>
+    <form method="post" enctype="multipart/form-data">
+        <label for="upload_folder">Upload Folder:</label>
+        <input type="text" name="upload_folder" value="{{ upload_folder }}" required>
+        <br>
+        <label for="cropped_folder">Cropped Folder:</label>
+        <input type="text" name="cropped_folder" value="{{ cropped_folder }}" required>
+        <br>
+        <label for="files">Select Files:</label>
+        <input type="file" name="files" multiple accept=".png, .jpg, .jpeg, .gif" required>
+        <br>
+        <label for="height">Height:</label>
+        <input type="number" name="height">
+        <br>
+        <label for="width">Width:</label>
+        <input type="number" name="width">
+        <br>
+        <label for="quality">Quality:</label>
+        <input type="number" name="quality" min="1" max="100">
+        <br>
+        <button type="submit">Crop Images</button>
+    </form>
+</body>
+</html>

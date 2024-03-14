@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Upload Complete</title>
+</head>
+<body>
+    <h1>Image Cropped Successfully!</h1>
+    {% if cropped_filename %}  <p>Your cropped image: <a href="{{ url_for('static', filename=cropped_filename) }}">cropped_{{ cropped_filename }}</a></p>
+    {% else %}
+        <p>An error occurred during cropping.</p>
+    {% endif %}
+</body>
+</html>
